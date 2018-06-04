@@ -1,5 +1,7 @@
 # To read the TidyDataSet into R:
   `data <- read.table(file_path, header = TRUE); View(data)`
+# Description of Data
+Detailed description of data can be found in the "Codebook.md" file. Details on the raw data, the cleaning process, and the resulting cleaned data are included.
 # Description of run_analysis.R script
 ## 1. Read in Data
   `Features<-read.table("./features.txt")` ##read in Features data from file
