@@ -69,6 +69,8 @@ Detailed description of data can be found in the "Codebook.md" file. Details on 
   
   `Features$V2<-gsub("std","StandardDeviation",Features$V2)` ##replace "std" with more descriptive "StandardDeviation"
   
+  `Featurees$V2<-gsub("BodyBody","Body",Features$V2)` ##replace typo "BodyBody" with "Body"
+  
   `Features$V2<-gsub("-(.*)\\()-?(.*)|-(.*)-?(.*)","\\1\\2",Features$V2)` ##find and remove dashes around text, and remove "()"
   
   `Features$V2<-gsub("([a-zA-Z]),([0-9])","\\1at\\2",Features$V2)` ##find pattern XYZ,123 and replace the comma with "at"
