@@ -59,6 +59,7 @@ Detailed description of data can be found in the "Codebook.md" file. Details on 
   `Features$V2<-gsub("^t|\\(t","Time",Features$V2)` ##replace "t" at beginning of variable name with "Time" to be more descriptive
   
   `Features$V2<-gsub("^f|\\(f","Frequency",Features$V2)` ##replace "f" at beginning of variable name with "Frequency" to be more descriptive
+  
   `Features$V2<-gsub("Acc","Accelerometer",Features$V2)` ##replace "Acc" with more descriptive "Accelerometer"
   
   `Features$V2<-gsub("Gyro","Gyroscope",Features$V2)` ##replace "Gyro" with more descriptive "Gyroscope"
