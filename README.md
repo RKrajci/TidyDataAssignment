@@ -57,6 +57,15 @@
   `Features$V2<-gsub("^t|\\(t","Time",Features$V2)` ##replace "t" at beginning of variable name with "Time" to be more descriptive
   
   `Features$V2<-gsub("^f|\\(f","Frequency",Features$V2)` ##replace "f" at beginning of variable name with "Frequency" to be more descriptive
+  `Features$V2<-gsub("Acc","Accelerometer",Features$V2)` ##replace "Acc" with more descriptive "Accelerometer"
+  
+  `Features$V2<-gsub("Gyro","Gyroscope",Features$V2)` ##replace "Gyro" with more descriptive "Gyroscope"
+  
+  `Features$V2<-gsub("Mag","Magnitude",Features$V2)` ##replace "Mag" with more descriptive "Magnitude"
+  
+  `Features$V2<-gsub("mean","Mean",Features$V2)` ##replace "mean" with easier to read "Mean"
+  
+  `Features$V2<-gsub("std","StandardDeviation",Features$V2)` ##replace "std" with more descriptive "StandardDeviation"
   
   `Features$V2<-gsub("-(.*)\\()-?(.*)|-(.*)-?(.*)","\\1\\2",Features$V2)` ##find and remove dashes around text, and remove "()"
   
@@ -100,7 +109,7 @@
   `names(Xtrain$Activity)<-"Activity"` ##label Activity column
 
 ## 8. Find Columns for Mean and Standard Deviation, merge Xtest and Xtrain
-  `MergeCols<-grep("mean|std|Subject|Activity",names(Xtest))` ##find desired columns by searching for variable names that include Mean, Std, Subject, or Activity; assign the column numbers to a vector MergeCols. Because the Columns are in the same order in Xtest and Xtrain, column numbers are pulled from one of data.frames to be used on both
+  `MergeCols<-grep("Mean|StandardDeviation|Subject|Activity",names(Xtest))` ##find desired columns by searching for variable names that include Mean, StandardDeviation, Subject, or Activity; assign the column numbers to a vector MergeCols. Because the Columns are in the same order in Xtest and Xtrain, column numbers are pulled from one of data.frames to be used on both
   
   `Merged<-rbind(Xtest[,MergeCols],Xtrain[,MergeCols])` ##create a merged table by rowbinding the columns of Xtest listed in MergeCols to the columns of Xtrain listed in MergeCols
   
