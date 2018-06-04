@@ -1,3 +1,5 @@
+# To read the TidyDataSet into R:
+  `data <- read.table(file_path, header = TRUE); View(data)`
 # Description of run_analysis.R script
 ## 1. Read in Data
   `Features<-read.table("./features.txt")` ##read in Features data from file
