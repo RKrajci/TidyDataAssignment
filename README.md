@@ -20,11 +20,11 @@ Detailed description of data can be found in the "Codebook.md" file. Details on 
   
   `Activity<-read.table("./activity_labels.txt")` ##read Activity labels from file
 ## 2.  Clean up Activity Labels and assign to Ytest and Ytrain 
-  `Activity<-tolower(Activity)` ##change activity label text to lowercase
+  `Activity$V2<-tolower(Activity$V2)` ##change activity label text to lowercase
   
-  `Activity<-gsub("_u","U",Activity)` ##remove underscores and change first letter of second word to uppercase
+  `Activity$V2<-gsub("_u","U",Activity$V2)` ##remove underscores and change first letter of second word to uppercase
   
-  `Activity<-gsub("_d","D",Activity)` ##remove underscores and change first letter of second word to uppercase
+  `Activity$V2<-gsub("_d","D",Activity$V2)` ##remove underscores and change first letter of second word to uppercase
   
   `YtestAct<-sub("1",Activity[1,2],Ytest$V1)` ##assign Activity label #1 (first element in Activity Label vector) to all rows in YtestAct vector that equal 1 and assign the modified Ytest to a new variable, YtestAct
   
